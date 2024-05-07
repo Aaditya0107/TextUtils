@@ -54,7 +54,7 @@ const TextForm = (props) => {
              <button className="btn btn-primary my-2" onClick={handleLoClick}>Convert to Lowercase</button>
              <button className="btn btn-primary my-2" onClick={handleSpacesClick}>Remove Extra Spaces</button>
              <button className="btn btn-primary my-2" onClick={handleCopyClick}>Copy Text</button>
-             <button className="btn btn-primary my-2" onClick={handleClearClick}>Clear Text</button>
+             <button className="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
         </div>
     </div>
     <div className="container my-3" style={{color: props.mode === "dark" ? "white" : "#042743"}}>
