@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
   // const location = useLocation();
+
   return (
     <>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
