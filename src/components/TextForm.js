@@ -28,7 +28,6 @@ const TextForm = (props) => {
         props.showAlert("Extra Spaces has been Removed!", "success");
     }
 
-
     const handleCopyClick = () => {
         var text = document.getElementById("myBox");
         text.select();

@@ -29,7 +29,6 @@ const About = (props) => {
             props.showAlert("Dark Mode has been Enabled", "success");
         }
     }
-
   return (
     <>
       <div className="container my-5 px-3 py-2" style={myStyle}>
