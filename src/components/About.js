@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 
-const About = () => {
+const About = (props) => {
 
     const [myStyle, setMyStyle] = useState({
-        color: "black",
-        backgroundColor: "white",
+        color: "#042743",
+        backgroundColor: "white", 
       }
     );
 
     const [btnText, setBtnText] = useState("Enable Dark Mode");
 
     const toggleStyle = () => {
-        if(myStyle.color === 'black'){         
+        if(myStyle.color === '#042743'){         
             setMyStyle({
                 color: "white",
-                backgroundColor: "black", 
+                backgroundColor: "#042743", 
                 border: "1px solid white"       
             });
             setBtnText("Enable Light Mode");
+            props.showAlert("Lignt Mode has been Enabled", "success");
         } 
         else{
             setMyStyle({
-                color: "black",
+                color: "#042743",
                 backgroundColor: "white",        
             })
             setBtnText("Enable Dark Mode");
+            props.showAlert("Dark Mode has been Enabled", "success");
         }
     }
-
-
   return (
     <>
       <div className="container my-5 px-3 py-2" style={myStyle}>
@@ -134,7 +134,7 @@ const About = () => {
           </div>
         </div>
         <div className="container my-4">
-          <button onClick={toggleStyle} className=" btn btn-primary">{btnText}</button>
+          <button onClick={toggleStyle} className="btn btn-primary">{btnText}</button>
         </div>
       </div>
     </>
